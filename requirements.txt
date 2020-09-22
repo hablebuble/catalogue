@@ -14,3 +14,5 @@ PySocks @ file:///opt/concourse/worker/volumes/live/85a5b906-0e08-41d9-6f59-084c
 six==1.15.0
 starlette==0.13.6
 urllib3 @ file:///tmp/build/80754af9/urllib3_1597086586889/work
+
+pandas~=1.1.2
