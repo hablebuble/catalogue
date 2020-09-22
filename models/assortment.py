@@ -22,6 +22,7 @@ class Flowers(Document):
     show_comment = BooleanField()
     country = StringField()
     show_country = BooleanField()
+    created_date = DateTimeField()
 
     def to_dict(self):
         return {
