@@ -50,5 +50,5 @@ class Flowers(Document):
         }
 
     meta = {"indexes": [
-        {'fields': ['$vbn', '$eng_desc', '$sort_rus']}
+        {'fields': ['$vbn', '$eng_desc', '$subgroup_rus', '$sort_rus']}
     ]}
