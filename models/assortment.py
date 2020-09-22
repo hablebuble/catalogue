@@ -48,3 +48,7 @@ class Flowers(Document):
             'show_country': self.show_country,
 
         }
+
+    meta = {"indexes": [
+        {'fields': ['$vbn', '$eng_desc', '$sort_rus']}
+    ]}
