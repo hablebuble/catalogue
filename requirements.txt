@@ -1,0 +1,16 @@
+brotlipy==0.7.0
+certifi==2020.6.20
+cffi @ file:///opt/concourse/worker/volumes/live/b9607b09-b777-4ff7-53dc-287727eb8574/volume/cffi_1600699191154/work
+cryptography @ file:///opt/concourse/worker/volumes/live/a7ee5cc5-41f4-40e1-6671-3e164687c6e0/volume/cryptography_1598892026615/work
+fastapi==0.61.1
+freeze==3.0
+idna @ file:///tmp/build/80754af9/idna_1593446292537/work
+mongoengine==0.20.0
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+pydantic==1.6.1
+pymongo==3.11.0
+pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1594392929924/work
+PySocks @ file:///opt/concourse/worker/volumes/live/85a5b906-0e08-41d9-6f59-084cee4e9492/volume/pysocks_1594394636991/work
+six==1.15.0
+starlette==0.13.6
+urllib3 @ file:///tmp/build/80754af9/urllib3_1597086586889/work
