@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from mongoengine import *
+from models.subgroup_rus import SubgroupRus
+from models.assortment import Flowers
 import datetime
 from fastapi.middleware.cors import CORSMiddleware
-
 
 connect(
     db='catalogue',
@@ -18,7 +19,9 @@ origins = [
     "http://localhost",
     "http://localhost:3000",
     "http://localhost:8080",
+    "http://localhost:59703",
     "http://192.168.0.239:8080"
+
 ]
 app.add_middleware(
     CORSMiddleware,
@@ -32,3 +35,13 @@ app.add_middleware(
 @app.get('/')
 def test():
     return 'Hello world!'
+
+
+@app.get('/groups')
+def get_all_groups():
+    return [each.to_dict() for each in SubgroupRus.objects.all()]
+
+
+@app.get("/{group_name}/flowers")
+def get_all_flowers(group_name: str):
+    return [each.to_dict() for each in Flowers.objects(subgroup_rus__iexact=group_name).order_by('sort_rus')]

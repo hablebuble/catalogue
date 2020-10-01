@@ -11,9 +11,11 @@ connect(
 
 file = 'subgroup_rus.xlsx'
 
-exel_data_df = pd.read_excel('../data/{}'.format(file), dtype={'subgroup_rus': str})
+exel_data_df = pd.read_excel('../data/{}'.format(file), dtype={'subgroup_rus': str}, )
 
 subgroup_rus_file = exel_data_df.to_dict(orient='record')
+for i in subgroup_rus_file:
+    i['subgroup_rus'] = str(i['subgroup_rus']).encode(encoding='utf-8')
 
 for i in subgroup_rus_file:
     insert = SubgroupRus(

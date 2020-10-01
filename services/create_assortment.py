@@ -19,6 +19,8 @@ assortment_from_excel = pd.read_excel('../data/{}'.format(file), dtype={
 })
 
 assortment_dict = assortment_from_excel.to_dict(orient='record')
+for i in assortment_dict:
+    i['VBN'] = str(i['VBN']).zfill(7)
 
 for i in assortment_dict:
     if pd.isna([i['hami_artno']]):
