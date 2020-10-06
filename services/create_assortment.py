@@ -83,6 +83,7 @@ for i in assortment_dict:
         show_supplier=i['show_supplier'],
         country=i['country'],
         show_country=i['show_country'],
+        active=True
     )
     insert.save()
 

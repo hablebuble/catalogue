@@ -3,8 +3,10 @@ from mongoengine import *
 
 class SubgroupRus(Document):
     subgroup_rus = StringField()
+    active = BooleanField()
 
     def to_dict(self):
         return {'id': str(self.id),
-                'subgroup_rus': str(self.subgroup_rus).encode(encoding='utf-8')
+                'subgroup_rus': str(self.subgroup_rus).encode(encoding='utf-8'),
+                'active': self.active
                 }

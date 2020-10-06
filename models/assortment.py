@@ -23,6 +23,7 @@ class Flowers(Document):
     country = StringField()
     show_country = BooleanField()
     created_date = DateTimeField()
+    active = BooleanField()
 
     def to_dict(self):
         return {
@@ -47,6 +48,7 @@ class Flowers(Document):
             'show_supplier': self.show_supplier,
             'country': self.country,
             'show_country': self.show_country,
+            'active': self.active
 
         }
 

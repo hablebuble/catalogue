@@ -19,6 +19,7 @@ for i in subgroup_rus_file:
 
 for i in subgroup_rus_file:
     insert = SubgroupRus(
-        subgroup_rus=i['subgroup_rus']
+        subgroup_rus=i['subgroup_rus'],
+        active=True
     )
     insert.save()

@@ -39,9 +39,9 @@ def test():
 
 @app.get('/groups')
 def get_all_groups():
-    return [each.to_dict() for each in SubgroupRus.objects.all()]
+    return [each.to_dict() for each in SubgroupRus.objects(active=True)]
 
 
 @app.get("/{group_name}/flowers")
 def get_all_flowers(group_name: str):
-    return [each.to_dict() for each in Flowers.objects(subgroup_rus__iexact=group_name).order_by('sort_rus')]
+    return [each.to_dict() for each in Flowers.objects(subgroup_rus__iexact=group_name, active=True).order_by('sort_rus')]
