@@ -44,4 +44,6 @@ def get_all_groups():
 
 @app.get("/{group_name}/flowers")
 def get_all_flowers(group_name: str):
+    group = SubgroupRus.objects(subgroup_rus=group_name)
+    SubgroupRus.objects(subgroup_rus=group_name).update(set__opened=group[0]['opened']+1)
     return [each.to_dict() for each in Flowers.objects(subgroup_rus__iexact=group_name, active=True).order_by('sort_rus')]
