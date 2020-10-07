@@ -10,4 +10,4 @@ connect(
 )
 
 
-Flowers.objects(sort_rus='0').update(set__active=False)
+Flowers.objects(sort_rus='Ауд роуз').update(set__active=False)
